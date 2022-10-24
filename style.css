@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* .parent > * + * {
+  margin-top: 2rem;
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+}
+
+<div class="parent">
+  <div class="child">
+    <div class="grand-child">
+    </div>
+  </div>
+  <div class="child">
+  </div>
+  <div class="child">
+  </div>
+</div>
+
+.child {
+
+}
+
+.space-y-2
+.space-x-2
+.gap-2
+
+<div > */

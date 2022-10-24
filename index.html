@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | E-commerce product page</title>
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+    <link href="./dist/output.css" rel="stylesheet" />
+    <script src="./carousel.js" defer></script>
+  </head>
+  <body>
+    <div class="max-w-7xl mx-auto">
+      <header class="flex items-center w-full border-b-2 border-gray-400">
+        <img class="mr-5" src="./images/logo.svg" alt="banner" />
+        <nav class="flex gap-5 justify-between mt-2">
+          <a
+            href="#"
+            class="border-b-4 border-transparent hover:border-yellow-600 py-5"
+            >Collections</a
+          >
+          <a
+            href="#"
+            class="border-b-4 border-transparent hover:border-yellow-600 py-5"
+            >Men</a
+          >
+          <a
+            href="#"
+            class="border-b-4 border-transparent hover:border-yellow-600 py-5"
+            >Women</a
+          >
+          <a
+            href="#"
+            class="border-b-4 border-transparent hover:border-yellow-600 py-5"
+            >About</a
+          >
+          <a
+            href="#"
+            class="border-b-4 border-transparent hover:border-yellow-600 py-5"
+            >Contact</a
+          >
+        </nav>
+        <div class="flex gap-4 items-center ml-auto">
+          <button class="group relative">
+            <img
+              class="w-6 h-5 cursor-pointer"
+              src="./images/icon-cart.svg"
+              alt="cart"
+            />
+            <div
+              class="hidden group-focus:flex group-hover:flex flex-col min-w-[350px] min-h-[300px] absolute -translate-x-1/2 border-2 border-emerald-600 shadow-xl bg-white"
+            >
+              <h4 class="border-b-[1px] border-gray-400 py-2">Cart</h4>
+              <div class="grid place-items-center flex-grow">
+                <p class="font-bold text-xl">Your cart is empty</p>
+              </div>
+            </div>
+          </button>
+          <a
+            href="#"
+            class="w-12 h-12 border-2 rounded-full hover:border-yellow-600"
+          >
+            <img src="./images/image-avatar.png" alt="user photo" />
+          </a>
+        </div>
+      </header>
+
+      <main class="mx-12 mt-28 flex justify-between">
+        <carousel-root class="max-w-lg w-full flex flex-col gap-5">
+          <carousel-active-img
+            width="400"
+            height="400"
+            class="[&>img]:rounded-lg"
+          >
+            <div></div>
+          </carousel-active-img>
+          <carousel-list class="flex justify-between">
+            <carousel-img
+              width="110"
+              height="110"
+              src="./images/image-product-1-thumbnail.jpg"
+              class="[&>img]:rounded-lg"
+            ></carousel-img>
+            <carousel-img
+              selected
+              width="110"
+              height="110"
+              src="./images/image-product-2-thumbnail.jpg"
+              class="[&>img]:rounded-lg"
+            ></carousel-img>
+            <carousel-img
+              width="110"
+              height="110"
+              src="./images/image-product-3-thumbnail.jpg"
+              class="[&>img]:rounded-lg"
+            ></carousel-img>
+            <carousel-img
+              width="110"
+              height="110"
+              src="./images/image-product-4-thumbnail.jpg"
+              class="[&>img]:rounded-lg"
+            ></carousel-img>
+          </carousel-list>
+        </carousel-root>
+
+        <!-- <div class="max-w-lg">
+          <img
+            class="mb-5 rounded-xl"
+            src="./images/image-product-1.jpg"
+            atl="product"
+          />
+          <div class="flex justify-between">
+            <img
+              class="w-28 rounded-lg"
+              src="./images/image-product-1-thumbnail.jpg"
+              alt="product"
+            />
+            <img
+              class="w-28 rounded-lg"
+              src="./images/image-product-2-thumbnail.jpg"
+              alt="product"
+            />
+            <img
+              class="w-28 rounded-lg"
+              src="./images/image-product-3-thumbnail.jpg"
+              alt="product"
+            />
+            <img
+              class="w-28 rounded-lg"
+              src="./images/image-product-4-thumbnail.jpg"
+              alt="product"
+            />
+          </div>
+        </div> -->
+
+        <div class="max-w-lg flex flex-col justify-center">
+          <p
+            class="text-orange text-lg tracking-widest font-semibold uppercase mb-3"
+          >
+            Sneaker Company
+          </p>
+          <h1 class="text-5xl font-bold mb-8">Fall Limited Edition Sneakers</h1>
+          <p class="text-base text-gray-400 leading-7 tracking-wider mb-6">
+            These low-profile sneakers are your perfect casual wear companion.
+            Featuring a durable rubber outer sole, they&apos;ll withstand
+            everything the weather can offer.
+          </p>
+          <div class="flex gap-2 items-end mb-2">
+            <b class="text-2xl">$125.00</b>
+            <b class="rounded-lg bg-orange-pale text-orange px-3 py-1">50%</b>
+          </div>
+          <del class="text-base text-gray-400 inline-block mb-6">$250.00</del>
+          <div class="flex gap-8">
+            <div
+              class="flex gap-7 bg-light-gray-blue w-fit py-2 px-8 rounded-lg"
+            >
+              <button aria-label="Increase count" class="text-orange">+</button>
+              0
+              <button aria-label="Decrease count" class="text-orange">-</button>
+            </div>
+
+            <button
+              class="flex gap-5 bg-orange text-white py-2 px-8 rounded-lg"
+            >
+              <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"
+                  fill="white"
+                  fill-rule="nonzero"
+                />
+              </svg>
+              Add to cart
+            </button>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
